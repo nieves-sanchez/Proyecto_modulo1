@@ -127,13 +127,13 @@ def main():
                                 mensaje_error = ""
                                 estado = "INTRO_NUM"
                         else:
-                            # ¿Cuántas preguntas quieres hacer? Elige al menos 5
+                            # ¿Cuántas preguntas quieres hacer? Elige mínimo 5 y máximo 10
                             if texto_input.strip() == "" or not texto_input.isdigit():
-                                mensaje_error = f"Entrada no válida. Introduce un número del 5 al {len(preguntas)}."
+                                mensaje_error = "Entrada no válida. Introduce un número del 5 al 10."
                             else:
                                 num = int(texto_input)
-                                if num < 5 or num > len(preguntas):
-                                    mensaje_error = f"Por favor, introduce un número entre 5 y {len(preguntas)}."
+                                if num < 5 or num > 10:
+                                    mensaje_error = "Por favor, introduce un número entre 5 y 10."
                                 else:
                                     num_preguntas = num
                                     mazo = random.sample(preguntas, num_preguntas)
@@ -154,10 +154,10 @@ def main():
 
                 elif estado == "GAME_OVER":
                     if evento.key == pygame.K_RETURN:
-                        # Volver a elegir número de preguntas, manteniendo nombre
+                        # Volver a jugar, introduciendo un nuevo nombre
                         texto_input = ""
                         mensaje_error = ""
-                        estado = "INTRO_NUM"
+                        estado = "INTRO_NOMBRE"
 
             # --------- RATÓN ----------
             if evento.type == pygame.MOUSEBUTTONDOWN and evento.button == 1:
@@ -234,7 +234,7 @@ def main():
             titulo = FUENTE_TITULO.render(f"¡Bienvenida al juego, {nombre_jugador}!", True, ROJO_NETFLIX)
             VENTANA.blit(titulo, (ANCHO // 2 - titulo.get_width() // 2, 60))
 
-            subtitulo = FUENTE_TEXTO.render("¿Cuántas preguntas quieres hacer? (mínimo 5)", True, BLANCO)
+            subtitulo = FUENTE_TEXTO.render("¿Cuántas preguntas quieres hacer? (mínimo 5, máximo 10)", True, BLANCO)
             VENTANA.blit(subtitulo, (80, 180))
 
             caja = pygame.Rect(80, 230, 200, 40)
@@ -370,7 +370,7 @@ def main():
                 VENTANA.blit(render3, (ANCHO // 2 - render3.get_width() // 2, y))
 
             texto4 = FUENTE_PEQUE.render(
-                "Pulsa ENTER para volver a jugar con el mismo nombre.",
+                "Pulsa ENTER para volver a jugar e introducir un nuevo nombre.",
                 True,
                 GRIS_CLARO,
             )

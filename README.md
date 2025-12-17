@@ -34,8 +34,8 @@ Desarrollar un juego de trivial en consola donde:
 
 - El juego finaliza cuando:
 
-    - se responden todas las preguntas seleccionadas, o 
-    - el jugador se queda sin vidas.
+  - se responden todas las preguntas seleccionadas, o
+  - el jugador se queda sin vidas.
 
 ---
 
