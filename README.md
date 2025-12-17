@@ -6,50 +6,60 @@ Un juego de preguntas y respuestas desarrollado en Python por el Equipo 2 formad
 
 El objetivo es practicar estructuras de control, diccionarios, listas, funciones, manejo de errores y lógica básica.
 
+---
+
 ## 👥 Equipo y Roles
 
-Miembro           Rol                    Tareas principales
-Nieves Sánchez    Scrum Master           Organización, tablero Kanban, milestones, control de avances, README y revisión
-Camila López      Desarrollo             Lógica del juego, funciones, control de errores y revisión
-María Granero     Documentación          Estructura de datos, README, presentación, prueba del juego y revisión
+| Miembro        | Rol           | Tareas principales                                                              |
+|----------------|---------------|---------------------------------------------------------------------------------|
+| Nieves Sánchez | Scrum Master  | Organización, tablero Kanban, milestones, control de avances, README y revisión |
+| Camila López   | Desarrollo    | Lógica del juego, funciones, control de errores y revisión                      |
+| María Granero  | Documentación | Estructura de datos, README, presentación, prueba del juego y revisión          |
+
+---
 
 ## 🎯 Objetivo del proyecto
 
 Desarrollar un juego de trivial en consola donde:
 
-El jugador elige cuántas preguntas quiere jugar (mínimo 5).
+- El jugador elige cuántas preguntas quiere jugar (mínimo 5).
 
-No puede elegir más preguntas de las que existen.
+- No puede elegir más preguntas de las que existen.
 
-Dispone de 3 vidas y pierde 1 por cada respuesta incorrecta.
+- Dispone de 3 vidas y pierde 1 por cada respuesta incorrecta.
 
-Si llega a 0 vidas → la partida termina automáticamente.
+- Si llega a 0 vidas → la partida termina automáticamente.
 
-Cada acierto suma 1 punto a la puntuación final.
+- Cada acierto suma 1 punto a la puntuación final.
 
-El juego finaliza cuando:
+- El juego finaliza cuando:
 
-se responden todas las preguntas seleccionadas, o el jugador se queda sin vidas.
+    - se responden todas las preguntas seleccionadas, o 
+    - el jugador se queda sin vidas.
+
+---
 
 ## 🧠 Contenidos de Python aplicados
 
 Este proyecto pone en práctica:
 
-Variables y tipos de datos
+- Variables y tipos de datos
 
-Listas y diccionarios
+- Listas y diccionarios
 
-Funciones
+- Funciones
 
-Bucles for
+- Bucles for
 
-Condiciones if / elif / else
+- Condiciones if / elif / else
 
-Manejo de errores con try/except
+- Manejo de errores con try/except
 
-Conversión de datos (int(), upper(), etc.)
+- Conversión de datos (int(), upper(), etc.)
 
-Uso de librerías (random.sample)
+- Uso de librerías (random.sample)
+
+---
 
 ## 🏗️ Estructura del juego
 
@@ -105,6 +115,8 @@ Uso de librerías (random.sample)
 
     o si ha terminado todas las preguntas
 
+---
+
 ## 📦 Estructura de datos
 
 Las preguntas están almacenadas en una lista de diccionarios, un formato como este:
@@ -131,6 +143,8 @@ Acceso limpio a opciones con claves A/B/C/D
 
 Manipulación sencilla por parte del bucle del juego
 
+---
+
 ## 🔀 Flujo del programa (resumen visual)
 
 Inicio → Petición de nombre → Elección nº de preguntas → Validación  
@@ -150,6 +164,8 @@ Bucle for de preguntas
 ↓  
 Resultados y mensaje final
 
+---
+
 ## 🧪 Pruebas realizadas
 
 Prueba                                     Resultado
@@ -158,6 +174,8 @@ Elegir menos de 5 preguntas                 Mensaje + nueva petición
 Elegir más preguntas de las disponibles     Mensaje + nueva petición
 Responder con letras minúsculas             Convertido a mayúsculas con .upper()
 Perder todas las vidas                     Bucle finaliza con break
+
+---
 
 ## 🚀 Mejoras futuras
 
