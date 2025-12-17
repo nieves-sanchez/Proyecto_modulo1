@@ -180,8 +180,6 @@ Resultados y mensaje final
 
 ## 🚀 Mejoras futuras
 
-Interfaz gráfica con Tkinter
-
 Modo dos jugadores
 
 Guardado de puntuaciones en archivo
@@ -207,8 +205,6 @@ Flujo de ejecución
 Diapositivas en Canva
 
 Demo en directo
-
-Preguntas de la profesora (cliente)
 
 ---
 
